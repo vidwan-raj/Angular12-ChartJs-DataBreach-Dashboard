@@ -1,0 +1,10 @@
+<div *ngIf="showDonutChart" class="chartjs-container">
+    <h4> Type of breach in {{stateName}} State</h4>
+    <canvas baseChart [data]="doughnutChartData" [labels]="doughnutChartLabels" [chartType]="doughnutChartType"
+        (chartClick)="chartClicked($event)">
+    </canvas>
+    <div class="chartjs-container">
+        <app-line-chart [updatedBreachType]="breachType" [updatedStateValToLine]="stateValToLine"
+            [showLineChart]="showLine"></app-line-chart>
+    </div>
+</div>
